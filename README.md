@@ -21,7 +21,7 @@ The MPCORB table contains orbit data for the SSO input populations.
 The noise table contains false detections for every exposure composed of Difference Image Artifacts (FD) and CCD Noise (NS)
  
 Schemata have been implemented as discussed with the SSSC according to the following templates:
-https://docs.google.com/document/d/1DmS35IkbfyIYYIIHAcQAsUoxIDRmk4BAgqX8d8upIK0
+https://docs.google.com/spreadsheets/d/1E0rTlvuJC0CvpLNsuWLK0x70uhpZww4v6GB5QkiQr-Q
 
 As of this moment several columns are empty or NULL. Those will be filled over the course of the upcoming SSPDB updates.
 
