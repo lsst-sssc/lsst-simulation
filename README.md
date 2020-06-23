@@ -20,10 +20,10 @@ The DIASource table contains information on individual observations of Solar Sys
 The MPCORB table contains orbit data for the SSO input populations.
 The noise table contains false detections for every exposure. False detections are composed of Difference Image Artifacts (FD) and CCD Noise (NS).
  
-Schemata have been implemented according to the following templates:
+Table schemata have been implemented according to the following templates:
 https://docs.google.com/spreadsheets/d/1E0rTlvuJC0CvpLNsuWLK0x70uhpZww4v6GB5QkiQr-Q
 
-As of this moment several columns are empty or NULL. Those will be filled over the course of the upcoming SSPDB updates.
+As of this moment several columns in the SSPDB are empty or NULL. Those will be filled over the course of the upcoming SSPDB updates.
 
 ## Accessing the SSPDB
 The SSPDB can be accessed via the SSSC Jupyter Hub @
@@ -33,7 +33,7 @@ https://sssc.dirac.institute
 The MySQL data base is located @  
 db.dirac.institute (accessible from within JupyterHub only)
 
-## SSO Input Populations: 
+## SSO Input Populations 
 Synthetic Solar System Model (S3M, Grav et al. 2011) 
 
 
