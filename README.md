@@ -25,6 +25,14 @@ https://docs.google.com/spreadsheets/d/1E0rTlvuJC0CvpLNsuWLK0x70uhpZww4v6GB5QkiQ
 
 As of this moment several columns are empty or NULL. Those will be filled over the course of the upcoming SSPDB updates.
 
+## Accessing the SSPDB
+The SSPDB can be accessed via the SSSC Jupyter Hub @
+https://sssc.dirac.institute
+
+
+The MySQL data base is located @  
+db.dirac.institute (accessible from within JupyterHub only)
+
 ## SSO Input Populations: 
 Synthetic Solar System Model (S3M, Grav et al. 2011) 
 
@@ -50,15 +58,6 @@ https://github.com/AsteroidSurveySimulator/objectsInField
 * All SSOs have spectral types: S, C according to (Ivesić et al. 2001). Colors and filter transformations were taked from Vereš & Chesley (2017).
 
 * False detections: DIA & CCD noise (Jones et al. 2017, Vereš & Chesley 2017)
-
-
-## Accessing SSPDB
-
-SSSC Jupyter Hub @
-https://sssc.dirac.institute
-
-MySQL Database @  
-db.dirac.institute (accessible from within JupyterHub only)
 
 ## References
 
