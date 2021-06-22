@@ -2,23 +2,24 @@
 Repository to collect feedback/issues for the simulates SolSys Products DB.
 
 
-# Release notes SSPDB version 0.1
+# Release notes SSPDB, June 2021
 
-The Solar System Products Data Base (SSPDB) contains a full density simulation of Solar System Object observations during year one of the Legacy Survey of Space and Time (LSST) to be conducted at the Vera C. Rubin Observatory. 
-The aim of the SSPDB is to give the Solar System Science Collaboration (SSSC) a preview of what LSST data 
-catalogs will look like. 
-This first relase of the SSPDB is intended to serve as a testing ground during the LSST SSSC sprint 2020. Future updates of the SSSPDB will add fidelity and include additional data in order to provide as complete a mock catalog of LSST Solar System observations as possible.
+The Solar System Products Data Base (SSPDB) contains a full density simulation of Solar System Object observations for the full 10 years of the Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST).
+The aim of the SSPDB is to give the Solar System Science Collaboration (SSSC) a preview of what LSST data catalogs will look like. 
+This second relase of the SSPDB is intended to serve as a testing ground during the LSST SSSC sprint 2021. Future updates of the SSSPDB will add fidelity and include additional data in order to provide as complete a mock catalog of LSST Solar System observations as possible.
 
 ## DB Realization
 The SSPDB is currently realized as a MySQL database with three tables:
 
 * DIASource
+* SSSource
+* SSObject
 * MPCORB
-* noise
 
 The DIASource table contains information on individual observations of Solar System Objects (SSOs).
+The SSObject table contains physical characteristics (slopes and magnitudes) computed based on LSST observations.
 The MPCORB table contains orbit data for the SSO input populations.
-The noise table contains false detections for every exposure. False detections are composed of Difference Image Artifacts (FD) and CCD Noise (NS).
+This release does not include the noise table in the database, but noise can be obtained from files.
  
 Table schemata have been implemented according to the following templates:
 https://docs.google.com/spreadsheets/d/1E0rTlvuJC0CvpLNsuWLK0x70uhpZww4v6GB5QkiQr-Q
@@ -26,19 +27,16 @@ https://docs.google.com/spreadsheets/d/1E0rTlvuJC0CvpLNsuWLK0x70uhpZww4v6GB5QkiQ
 As of this moment several columns in the SSPDB are empty or NULL. Those will be filled over the course of the upcoming SSPDB updates.
 
 ## Accessing the SSPDB
-The SSPDB can be accessed via the SSSC Jupyter Hub @
-https://sssc.dirac.institute
+The SSPDB can be accessed via the SSSC Jupyter Hub @ https://sssc.dirac.institute
 
-
-The MySQL data base is located @  
-db.dirac.institute (accessible from within JupyterHub only)
+The Postgres database is located @ pg.dirac.institute (accessible from within JupyterHub only)
 
 ## SSO Input Populations 
 Synthetic Solar System Model (S3M, Grav et al. 2011) 
 
 
 ## Survey Simulation
-Operations Simulation (OpSim) run Feature Based Scheduler version 1.5 @ 
+Operations Simulation (OpSim) run Feature Based Scheduler version 1.7 (baseline_nexp2_v1.7.1_10yrs) @ 
 http://astro-lsst-01.astro.washington.edu:8081/
 
 ## Observation Simulator
@@ -53,11 +51,15 @@ https://github.com/AsteroidSurveySimulator/objectsInField
 
 * Trailing losses
 
-* “Fading”/statistical detection cutoff
+* Magnitude errors
 
-* All SSOs have spectral types: S, C according to (Ivesić et al. 2001). Colors and filter transformations were taked from Vereš & Chesley (2017).
+* (H, G) magnitude fits (note: it's _not_ H, G12, despite the column names)
 
-* False detections: DIA & CCD noise (Jones et al. 2017, Vereš & Chesley 2017)
+* Astrometric errors
+
+* All SSOs have spectral types: S, C according to (Ivezić et al. 2001). Colors and filter transformations were taked from Vereš & Chesley (2017).
+
+* False detections: DIA & CCD noise (Jones et al. 2017, Vereš & Chesley 2017) (available only as files)
 
 ## References
 
