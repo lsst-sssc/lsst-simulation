@@ -1,5 +1,5 @@
 # LSST Simulation Issues
-Repository to collect feedback for the simulates SolSys Products DB. If you have requests for specific values to be calculated and included as columns in DP0.3 please post an issue so the SSSC can collate these. 
+Repository to collect feedback for the simulated SolSys Products DB. If you have requests for specific values to be calculated and included as columns in DP0.3 please post an issue so the SSSC can collate these. 
 
 
 # Release notes DP0.3
